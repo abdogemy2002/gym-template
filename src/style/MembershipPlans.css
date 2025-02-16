@@ -1,0 +1,189 @@
+/* General Styles for Membership Plans Page */
+:root {
+  --primary-orange: #ff6f00;
+  --dark-orange: #cc5700;
+  --light-orange: #fad381;
+  --background-dark: #333;
+  --background-light: #fff;
+  --text-dark: #222;
+  --text-light: #444;
+  --text-gray: #474747; /* Added gray text color */
+}
+.membership-plans-page {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  font-family: "Teko", sans-serif;
+}
+
+/* Header Section */
+.plans-header {
+  text-align: center;
+  padding: 3rem 0;
+  background: linear-gradient(135deg,var(--primary-orange), var(--light-orange), var(--primary-orange)); /* Gradient background */
+  border-bottom: 2px solid #ff6f00;
+}
+
+.plans-header h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #ff6f00, #ffa500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow( 4px 4px 2px rgb(58, 38, 0)); 
+}
+
+.plans-header p {
+  font-size: 1.75rem;
+  color: #4f4f4f;
+}
+
+/* Plans Section */
+.plans-section {
+  padding: 3rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:url(../assets/imgs/hero_bg.jpeg) no-repeat center center/cover;
+}
+/* .container {
+display: flex;
+justify-content: center;
+} */
+.plans-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.plan-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 2rem;
+  flex: 1 1 30%;
+  min-height: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card h3 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #ff6f00, #ffa500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.plan-card p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff6f00;
+}
+
+.plan-card ul {
+  padding: 0;
+  list-style: none;
+}
+
+.plan-card ul li {
+  font-size: 1.25rem;
+  color: #c1bfbf;
+  margin-bottom: 0.75rem;
+}
+
+.plan-card ul li::before {
+  content: "✓";
+  color: #ff7f50;
+  margin-right: 10px;
+}
+
+/* Button */
+.plan-card .btn {
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #ff6f00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card .btn:hover {
+  background-color: #e67300;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles for Tablets */
+@media (max-width: 768px) {
+  .plans-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-card {
+    width: 100%;
+    max-width: 80%;
+    margin-bottom: 2rem;
+  }
+  .container {
+    display: block;
+    /* justify-content: center; */
+    }
+}
+
+/* Responsive Styles for Small Devices */
+@media (max-width: 480px) {
+  .plans-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .plans-header p {
+    font-size: 1.25rem;
+  }
+
+  .plan-card h3 {
+    font-size: 1.75rem;
+  }
+
+  .plan-card p {
+    font-size: 1.25rem;
+  }
+
+  .plan-card ul li {
+    font-size: 1rem;
+  }
+
+  .plan-card .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .plan-card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

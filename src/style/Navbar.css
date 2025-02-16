@@ -1,0 +1,210 @@
+/* Base Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #141414;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.navbar-logo a {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(180deg, #ff6f00, #ffa500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo a:hover {
+  transform: scale(1.1);
+}
+
+/* Desktop Menu Links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.menu-items {
+  display: flex;
+  position: relative;
+  list-style: none;
+  gap: 2rem;
+  top: 7px;
+}
+
+.menu-items li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.menu-items li a:hover {
+  color: #ff6f00;
+  transform: scale(1.05);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.auth-links .btn {
+  background: #ff6f00;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: bold;
+}
+
+.auth-links .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 111, 0, 0.7);
+}
+
+.auth-links .navbar-username {
+  color: white;
+  margin-right: 1rem;
+}
+
+/* Mobile Toggle */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  cursor: pointer;
+}
+
+.toggle-bar {
+  width: 30px;
+  height: 3px;
+  background-color: #ff6f00;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggle.open .toggle-bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.navbar-toggle.open .toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.open .toggle-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Full-Screen Overlay for Mobile */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  z-index: 998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.overlay-show {
+  transform: translateX(0);
+}
+
+.overlay-menu {
+  list-style: none;
+  text-align: center;
+}
+
+.overlay-menu li {
+  margin: 1.5rem 0;
+}
+
+.overlay-menu li a {
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.overlay-menu li a:hover {
+  color: #ff6f00;
+}
+
+.overlay .btn {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(180deg, #ff6f00, #ffa500);
+  color: white;
+  border-radius: 30px;
+}
+
+/* Icon Styles (Cart, Notification, Avatar) */
+.navbar .icon {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.navbar .icon .badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ff6f00;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Avatar Image */
+.navbar .avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-left: 1.5rem;
+  border: 2px solid #ff6f00;
+  transition: border 0.3s ease;
+}
+
+.navbar .avatar:hover {
+  border: 2px solid white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .auth-links {
+    display: none;
+  }
+
+  .icon, .avatar {
+    display: none;
+  }
+}

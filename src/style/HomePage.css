@@ -1,0 +1,600 @@
+/* General Styles */
+@import url("https://fonts.googleapis.com/css?family=Teko:700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+:root {
+  --primary-orange: #ff6f00;
+  --dark-orange: #cc5700;
+  --light-orange: #fad381;
+  --background-dark: #333;
+  --background-light: #fff;
+  --text-dark: #222;
+  --text-light: #444;
+  --text-gray: #474747; /* Added gray text color */
+}
+
+.btn{
+  outline: none !important;
+}
+/* Custom Button Styles */
+.custom-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #ff6f00; /* Orange button color */
+  color: white;
+  text-transform: uppercase;
+  border: none; /* Remove default borders */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 1s ease-in-out;
+}
+
+.custom-btn:hover {
+  background-color: #cc5700; /* Darker orange on hover */
+  transform: translateY(-3px); /* Subtle lift on hover */
+  color: #ccc;
+}
+
+.custom-btn-outline {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #ff6f00;
+  background-color: transparent;
+  border: 2px solid #ff6f00;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-btn-outline:hover {
+  background-color: #ff6f00;
+  color: white;
+  transform: translateY(-3px); /* Subtle lift on hover */
+}
+
+/* CTA Section Button Styles */
+.cta-section .custom-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  background-color: #333; /* Dark background for CTA button */
+  color: white;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section .custom-btn:hover {
+  background-color: #ff6f00;
+  box-shadow: 0 10px 20px rgba(255, 111, 0, 0.6); /* Glowing effect on hover */
+  transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+/* Shared Styles */
+.text-effect, .hero-section h1, .features-section h2, .testimonials-section h2, .feature-box h3 {
+  font-family: "Teko", sans-serif;
+  font-weight: 1000;
+  font-size: 4rem;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #ff6f00, #ffa500); /* Orange gradient */
+  filter: drop-shadow(0 0 10px rgba(255, 111, 0, 0.5));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;  filter: drop-shadow( 4px 4px 1px rgb(58, 38, 0)); 
+
+}
+
+.text-effect {
+  font-size: 3rem; /* Adjust size as needed */
+  background: linear-gradient(180deg, #ff6f00, #ffa500); /* Orange gradient */
+  filter: drop-shadow(0 0 10px rgba(255, 111, 0, 0.5));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/imgs/hero_bg.jpeg") no-repeat center center/cover ;
+  overflow: hidden;
+}
+
+/* Main content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0 5vw;
+}
+
+/* Text Box */
+.hero-text-box {
+  max-width: 600px;
+  color: #fff;
+  text-align: left;
+  z-index: 10;
+}
+
+.hero-text-box h1 {
+  font-family: "Teko", sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #ff6f00;
+  letter-spacing: 3px;
+  margin-bottom: -1rem;
+  line-height: 1.2;
+}
+
+.hero-text-box p {
+  font-family: 'Allison', cursive;
+  font-size: 3rem;
+  color: #ddd;
+  filter: drop-shadow( 4px 4px 1px rgb(58, 38, 0));
+}
+
+/* Button */
+.custom-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: #ff6f00;
+  color: white;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 111, 0, 0.4);
+}
+
+.custom-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 111, 0, 0.8);
+}
+
+/* Word Slider */
+/* Word Slider */
+.word-slider {
+  position: absolute;
+  right: 40%;
+  width: 100%;
+  z-index: 5;
+  transform: rotate(-89.5deg);
+}
+
+.ws-2 {
+  right: 28%;
+}
+
+/* First slider track (left movement) */
+.slider-track {
+  display: flex;
+  white-space: nowrap;
+  animation: scrollText 20s linear infinite;
+}
+
+.slider-track span {
+  font-family: "Teko", sans-serif;
+  font-size: 7rem;
+  text-transform: uppercase;
+  color: rgba(243, 230, 221, 0.8);
+  margin-right: 2rem;
+  letter-spacing: 2px;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Second slider track (right movement) */
+.slider-track.st-2 {
+  display: flex;
+  white-space: nowrap;
+  animation: scrollTextReverse 20s linear infinite;
+}
+
+@keyframes scrollTextReverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+/* Angled background shape */
+.hero-angled-bg {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  top: 0;
+  right: -100px;
+  width: 50vw;
+  height: 100%;
+  background: rgba(255, 111, 0, 0.8);
+  transform: skewX(-25deg);
+  z-index: 1;
+  animation: slideIn 2s ease-in-out forwards;
+  box-shadow: 0 0 50px rgba(255, 111, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text-box {
+    text-align: center;
+  }
+
+  .hero-angled-bg {
+    display: none;
+    width: 0%;
+  }
+
+  .slider-track span {
+    font-size: 2.5rem;
+  }
+}
+
+
+/* Features Section */
+.features-section, .testimonials-section, .cta-section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.features-section {
+  /* background-color: #f2d9c3; */
+  background: url("../assets/imgs/backdrop/5804273.jpg") no-repeat center center/cover;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features-heading {
+  position: relative;
+  margin-bottom: 2rem;
+  text-align: center; 
+filter: drop-shadow( 4px 4px 1px rgb(58, 38, 0)); 
+
+}
+
+
+.feature-box {
+  background: rgba(255, 255, 255, 0.958);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1rem 0;
+  height: 500px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.489);
+  transition: transform 0.3s ease, background-color 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+  background-blend-mode: normal;
+  background-color: rgba(0, 0, 0, 0); /* Transition to no background color */
+  }
+
+.feature-box h3 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.feature-box p {
+  font-size: 1.5rem;
+  color: #ecb082; /* Darker paragraph text */
+}
+
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #ff6f00, #ffa500); /* Vibrant orange gradient */
+  color: white;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  animation: rotateGlow 6s linear infinite;
+  z-index: 0;
+}
+
+.cta-section h2 {
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  z-index: 1;
+  filter: drop-shadow( 4px 4px 1px rgb(58, 38, 0)); 
+  font-family: "Teko", sans-serif;
+  font-weight: 1000;
+  font-size: 4rem;
+}
+
+.cta-section p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  z-index: 1;
+}
+
+.cta-section .btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  background-color: #333;
+  color: white;
+  border-radius: 50px;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section .btn:hover {
+  background-color: #ff6f00;
+  box-shadow: 0 10px 20px rgba(255, 111, 0, 0.6); /* Glowing effect on hover */
+  transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.cta-section .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.cta-section .btn:hover::before {
+  opacity: 0;
+}
+
+/* Glowing Animation */
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 4rem 1rem;
+  background-color:  #ffd387;
+  color: #333;
+  background-image: url("../assets/imgs/dumbbel.png");
+  background-position: center;
+  background-size: 300px;
+  filter: opacity();
+  animation: moveBackground 20s linear infinite; /* Animation */
+}
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0; /* Starting position */
+  }
+  100% {
+    background-position: 0 100%; /* Ending position */
+  }
+}
+.testimonial-heading {
+  position: relative;
+  margin-bottom: 2rem;
+  text-align: center; /* Center the text */ 
+}
+
+.testimonial-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.carousel-inner{
+  margin: -30px 0;
+  padding: 15px;
+}
+
+
+.testimonial-img {
+  width: 100px; /* Adjust the size */
+  height: 100px; /* Adjust the size */
+  border-radius: 50%; /* Make it circular */
+  border: 2px solid #ff6f00; /* Orange border */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.442);
+  position: relative;
+  top: 50px;
+}
+
+.user1{
+  background: url("../assets/imgs/user1.jpg") no-repeat center center/cover;
+}
+.user2{
+  background: url("../assets/imgs/user2.jpg") no-repeat center center/cover;
+}
+.user3{
+  background: url("../assets/imgs/user3.jpg") no-repeat center center/cover;
+}
+.carousel-item
+{
+  display: flex;
+  align-items:center;
+}
+
+blockquote {
+  background: rgba(255, 255, 255, 0.871);
+  padding: 3rem;
+  border-bottom: 5px solid #ff6f00; /* Orange accent */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.442);
+  font-size: 1.5rem;
+}
+.carousel-indicators{
+  position: relative;
+  top: 100%;
+}
+
+.carousel-indicators button {
+  background-color: #ccc; 
+  border: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease; 
+}
+
+
+.carousel-indicators .active {
+  background-color: #ff6f00 !important; 
+  width: 16px; 
+  height: 16px;
+}
+
+/* Optional: hover effect */
+.carousel-indicators button:hover {
+  background-color: #ff6f00; 
+}
+
+
+/* Box Section with Shared Transition */
+.box1, .box2, .box3 {
+  background-size: cover;
+  background-position: 50%;
+  background-blend-mode:darken;
+  background-color: rgba(34, 34, 34, 0.521);
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.box1 { background-image: url(../assets/imgs/featuers1.jpg); }
+.box2 { background-image: url(../assets/imgs/featuers2.jpg); }
+.box3 { background-image: url(../assets/imgs/featuers3.jpg); }
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .hero-section,
+  .cta-section {
+    max-height: 80vh; /* Consistent max height */
+    padding: 1rem; /* Consistent padding */
+  }
+
+  /* Heading Font Sizes */
+  .hero-section h1,
+  .features-section h2,
+  .testimonials-section h2,
+  .cta-section h2 {
+    font-size: 3rem; /* Consistent font size */
+  }
+
+  .feature-box h3 {
+    font-size: 4rem; /* Slightly smaller for readability */
+  }
+
+  /* Blockquote Font Size */
+  blockquote {
+    font-size: 1.5rem; /* Consistent size for easier reading */
+    height: auto; /* Allow for variable content height */
+    padding: 1rem; /* Add padding for better spacing */
+  }
+
+  /* Testimonial Item Layout */
+  .testimonial-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center alignment */
+    text-align: center; /* Center text */
+  }
+
+  /* Carousel Layout */
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .carousel-indicators {
+    position: relative;
+    top: 105%; /* Ensure visibility of indicators */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hero Section */
+  .hero-section {
+    max-height: 80vh; /* Keep the height consistent */
+    padding: 1rem; /* Maintain padding */
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem; /* Adjust for smaller screens */
+  }
+
+  /* Text Paragraph Sizes */
+  .hero-section p,
+  .cta-section p,
+  .testimonials-section p {
+    font-size: 0.9rem; /* Consistent paragraph size */
+  }
+
+  /* Section Heading Sizes */
+  .features-section h2,
+  .testimonials-section h2,
+  .cta-section h2 {
+    font-size: 3rem; /* Consistent size across sections */
+  }
+
+  /* Feature Box Heading Size */
+  .feature-box h3 {
+    font-size: 4rem; /* Maintain readability */
+  }
+
+  /* Carousel Item Styles */
+  .carousel-item {
+    padding: 1rem; /* Consistent padding */
+  }
+
+  /* Testimonial Image Size */
+  .testimonial-img {
+    width: 50px; /* Keep size consistent */
+    height: 50px; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: Rounded image */
+  }
+
+  /* Blockquote Font Size */
+  blockquote {
+    font-size: 1rem; /* Smaller size for mobile */
+  }
+
+  /* Carousel Control Icon Sizes */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 20px; /* Adjust size for better visibility */
+    height: 20px; /* Maintain consistency */
+  }
+}
