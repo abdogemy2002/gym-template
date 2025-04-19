@@ -49,7 +49,7 @@ const Navbar = ({ user, setUser }) => {
       </div>
 
       {/* Icon Links */}
-      <div className="icon-links">
+      {/* <div className="icon-links">
         <a className="icon" href="#">
           <i className="fas fa-shopping-cart"></i>
           <span className="badge">2</span>
@@ -63,7 +63,7 @@ const Navbar = ({ user, setUser }) => {
             <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" alt="avatar" />
           </a>
         )}
-      </div>
+      </div> */}
 
       {/* Mobile Toggle */}
       <div className={`navbar-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
